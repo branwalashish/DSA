@@ -84,18 +84,41 @@ public class MyLinkedList {
 	}
 
     
-    
+    //to show only element of the last node
     public int findLast() {
-		if (head == null) {
+		if (head == null) 
+        {
 			throw new NullPointerException("LinkedList is empty");
 		}
 		Node temp = head;
-		while (temp.next != null) {
+		while (temp.next != null) 
+        {
 			temp = temp.next;
 		}
 		return temp.data;
 	}
+  
 
+  public int remove(){
+    int res;
+    if(head == null){
+        throw new NullPointerException("Empty LinkedList ");
+    }
+    else if(head.next == null){
+        res = head.data;
+        head = head.next;
+        return res;
+    }
+   
+        Node temp = head;
+        while (temp.next.next!=null) 
+        {
+            temp = temp.next;
+
+        }
+    res = temp.next.data;
+    temp.next = null;
+    return res;
   }
 
 
