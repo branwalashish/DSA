@@ -1,5 +1,5 @@
 package leetcode;
-//
+//this is the problem link --> https://leetcode.com/problems/zigzag-conversion/description/
 class ZigZagConversion {
 
     /**
